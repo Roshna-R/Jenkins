@@ -43,7 +43,7 @@ resource "aws_vpc" "prod-vpc" {
  resource "aws_subnet" "subnet-1" {
    vpc_id            = aws_vpc.prod-vpc.id
    cidr_block        = "10.0.4.0/24"
-   availability_zone = "us-west-1b"
+ 
 
    tags = {
      Name = "prod-subnet1"
@@ -129,7 +129,7 @@ resource "aws_vpc" "prod-vpc" {
  resource "aws_instance" "web-server-instance" {
    ami               = "ami-0dc5e9ff792ec08e3"
    instance_type     = "t2.micro"
-   availability_zone = "us-west-1b"
+   
    
    
     
